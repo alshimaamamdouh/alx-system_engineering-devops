@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 # Installs Nginx
 
-sudo apt-get install -y nginx
-sudo service nginx start
-sudo sed -i 's/ listen\s*80;/ listen 80 default_server;/g' /etc/nginx/sites-available/default
-sudo service nginx restart
-echo "<!DOCTYPE html><html><body><h1>Hello World!</h1></body></html>" | sudo tee /var/www/html/index.html
+#!/usr/bin/env bash
+# Installs Nginx
 
+
+apt-get install -y nginx
+echo "Hello World!" | sudo tee /var/www/html/index.html
+service nginx start
 
