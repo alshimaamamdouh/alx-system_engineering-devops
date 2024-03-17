@@ -1,0 +1,29 @@
+Introduction:
+In today's interconnected digital world, understanding the intricate dance between a user's browser and the vast network of servers powering the internet is crucial for any software engineer. From the moment you type in a URL and hit Enter, a complex series of steps unfolds behind the scenes to deliver the web page you requested. In this article, we'll unravel the journey of a web request, shedding light on each component involved, from DNS resolution to database interaction.
+
+    DNS Request:
+    The journey begins as soon as you type "https://www.google.com" into your browser's address bar and press Enter. Your browser initiates a DNS (Domain Name System) lookup to translate the human-readable domain name "www.google.com" into an IP address. This lookup involves querying a DNS server, which returns the corresponding IP address (e.g., 172.217.1.36) associated with the domain.
+
+    TCP/IP:
+    Armed with the IP address, your browser establishes a TCP (Transmission Control Protocol) connection with the server hosting the website. TCP ensures reliable data transmission by breaking down the data into packets, managing their sequencing, and handling errors or retransmissions.
+
+    Firewall:
+    Before reaching the server, the data packets may encounter firewalls deployed for network security. Firewalls analyze incoming traffic based on predefined rules, filtering out potentially malicious or unauthorized requests while allowing legitimate ones to pass through.
+
+    HTTPS/SSL:
+    In the case of "https://" URLs, a secure communication channel is established using SSL (Secure Sockets Layer) or its successor, TLS (Transport Layer Security). This encryption protocol ensures that the data exchanged between your browser and the server remains confidential and tamper-proof, safeguarding against eavesdropping or data manipulation by malicious actors.
+
+    Load-Balancer:
+    For high-traffic websites like Google, incoming requests are often distributed across multiple servers to prevent overloading and ensure optimal performance. Load balancers act as traffic managers, intelligently routing requests to the least busy server in a pool, thereby improving scalability, fault tolerance, and responsiveness.
+
+    Web Server:
+    Upon reaching the designated server, the web server software (e.g., Apache, Nginx) processes the incoming request. It retrieves the requested web page or resource from its storage location and generates an HTTP response containing the requested content, along with appropriate headers and status codes.
+
+    Application Server:
+    In some cases, especially for dynamic web pages or web applications, the web server may delegate certain tasks to an application server. The application server executes server-side scripts, interacts with databases, and performs complex computations before generating a response to be sent back to the client.
+
+    Database:
+    If the requested content involves retrieving or manipulating data stored in a database (e.g., user information, search results), the application server communicates with the appropriate database server. The database server processes queries, retrieves or updates data, and returns the results to the application server for further processing.
+
+Conclusion:
+As the web request completes its journey, traversing through DNS resolution, TCP/IP transmission, security measures like HTTPS/SSL, load balancing, server-side processing, and database interaction, we gain a deeper appreciation for the intricate infrastructure underpinning our online experiences. By understanding each step in this journey, software engineers can optimize performance, enhance security, and ensure seamless user interactions in the ever-evolving landscape of the internet.
