@@ -28,8 +28,12 @@ if __name__ == "__main__":
             task_completed = i.get('completed')
             if task_completed:
                 num_comp_tasks += 1
-            tasks.append({"task": i.get('title'), "completed": task_completed, "username": user_name})
+            tasks.append({
+                "task": i.get('title'),
+                "completed": task_completed,
+                "username": user_name
+                })
 
     json_file_name = str(user_id) + ".json"
     with open(json_file_name, 'w') as jsonfile:
-        json.dump({ user_id: tasks }, jsonfile)
+        json.dump({user_id: tasks}, jsonfile)
