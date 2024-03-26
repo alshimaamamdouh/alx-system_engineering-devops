@@ -13,7 +13,12 @@ if __name__ == "__main__":
     num_comp_tasks = 0;
     tasks = []
     user_info = (requests.get(url_user)).json()
+    if user_info.status_code != 200:
+        return
+
     todo_info = (requests.get(url_todo)).json()
+    if todo_info.status_code != 200:
+        return
 
     for i in user_info:
         if i.get('id') == int(sys.argv[1]):
