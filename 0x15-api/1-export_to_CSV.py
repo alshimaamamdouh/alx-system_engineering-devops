@@ -34,6 +34,3 @@ if __name__ == "__main__":
     with open(csv_file_name, 'w', newline='') as csvfile:
         csv_writer = csv.writer(csvfile)
         csv_writer.writerows(tasks)
-
-
-
