@@ -5,7 +5,6 @@
 import requests
 import sys
 
-
 if __name__ == "__main__":
     url_todo = 'https://jsonplaceholder.typicode.com/todos/'
     url_user = 'https://jsonplaceholder.typicode.com/users'
