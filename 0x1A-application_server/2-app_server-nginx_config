@@ -6,7 +6,7 @@ server {
     index  index.html index.htm;
 
     # Use IP of server as domain name
-    server_name 54.237.75.164;
+    server_name 54.164.241.47;
 
     location /redirect_me {
         return 301 http://youtube.com/;
